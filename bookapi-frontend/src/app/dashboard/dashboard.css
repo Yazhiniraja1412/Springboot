@@ -1,0 +1,76 @@
+.dashboard-wrapper {
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #e0f7fa, #fce4ec);
+  min-height: 100vh;
+  text-align: center;
+}
+
+.dashboard-title {
+  font-size: 2.2rem;
+  color: #4a148c;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.dashboard-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+
+.dash-card {
+  background-color: #ffffff;
+  padding: 30px 20px;
+  width: 220px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.dash-card h5 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #6a1b9a;
+}
+
+.dash-card:hover {
+  transform: translateY(-5px);
+  background-color: #f3e5f5;
+  border-color: #ba68c8;
+}
+/* Header button tweaks */
+.header-buttons .btn {
+  padding: 8px 16px;
+  font-weight: 500;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-primary {
+  background-color: #ffffff;
+  border: 2px solid #007bff;
+  color: #007bff;
+}
+
+.btn-outline-primary:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.btn-outline-danger {
+  background-color: #ffffff;
+  border: 2px solid #dc3545;
+  color: #dc3545;
+}
+
+.btn-outline-danger:hover {
+  background-color: #dc3545;
+  color: #fff;
+}
+

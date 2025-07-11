@@ -1,0 +1,27 @@
+<div class="dashboard-wrapper">
+
+  <!-- Top Right Header with Home & Logout -->
+  <div class="dashboard-header">
+    <div></div> <!-- Left empty space -->
+    <div class="header-buttons">
+      <a routerLink="/" class="btn btn-outline-primary">🏠 Home</a>
+      <button class="btn btn-outline-danger" (click)="logout()">🚪 Logout</button>
+    </div>
+  </div>
+
+  <h2 class="dashboard-title">📚 Book Dashboard</h2>
+
+  <div class="dashboard-cards">
+    <div class="dash-card" routerLink="/books">
+      <h5>📖 View Books</h5>
+    </div>
+
+    <div class="dash-card" routerLink="/books/new">
+      <h5>➕ Add Book</h5>
+    </div>
+
+    <div class="dash-card" routerLink="/books/edit/1234">
+      <h5>✏️ Update Book</h5>
+    </div>
+  </div>
+</div>

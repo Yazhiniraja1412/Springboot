@@ -1,0 +1,50 @@
+<div class="container mt-4">
+
+  <div class="header-with-button">
+    <h2>📖 All Books</h2>
+    <button class="btn btn-info dashboard-btn" (click)="goToDashboard()">Dashboard</button>
+  </div>
+
+  <!-- Search by ISBN -->
+  <div class="input-group mb-3 w-50">
+    <input [(ngModel)]="searchIsbn" class="form-control" placeholder="Enter ISBN to search" />
+    <button class="btn btn-primary" (click)="searchBookByIsbn()">Search</button>
+    <button class="btn btn-secondary" (click)="clearSearch()">Clear</button>
+  </div>
+
+  <!-- Error message -->
+  <div *ngIf="error" class="alert alert-danger w-50">{{ error }}</div>
+
+  <!-- Searched Book Card -->
+  <div *ngIf="searchedBook" class="card mb-4 w-50">
+    <div class="card-body">
+      <h5 class="card-title">{{ searchedBook.title }}</h5>
+      <p class="card-text">Author: {{ searchedBook.author }}</p>
+      <p class="card-text"><strong>ISBN:</strong> {{ searchedBook.isbn }}</p>
+    </div>
+  </div>
+
+  <!-- Book List Table -->
+  <table class="table table-bordered table-hover">
+    <thead class="table-dark">
+      <tr>
+        <th>ISBN</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th width="160">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of books">
+        <td>{{ book.isbn }}</td>
+        <td>{{ book.title }}</td>
+        <td>{{ book.author }}</td>
+        <td>
+          <a [routerLink]="['/books/edit', book.isbn]" class="btn btn-sm btn-warning me-1">Edit</a>
+          <button class="btn btn-sm btn-danger" (click)="deleteBook(book.isbn)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

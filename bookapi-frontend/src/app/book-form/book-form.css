@@ -1,0 +1,132 @@
+body, html {
+  margin: 0;
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.form-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+
+  /* Background image with dark transparent overlay */
+  background:
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=1470&q=80')
+    no-repeat center center fixed;
+  background-size: cover;
+}
+
+.form-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  /* Optional: additional overlay, can remove if too dark */
+  /* background: rgba(0, 0, 0, 0.3); */
+  z-index: -1;
+  border-radius: 12px;
+}
+
+/* Dashboard button top right */
+.dashboard-container {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 10;
+}
+
+.dashboard-btn {
+  background-color: #45b817;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  white-space: nowrap;
+}
+
+.dashboard-btn:hover {
+  background-color: #ea5617;
+}
+
+/* Form card */
+.form-card {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+}
+
+.form-card h2 {
+  color: #2c3e50;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  align-self: flex-start;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 6px;
+  margin-left: 10px;
+}
+
+input.form-control {
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 18px;
+  width: 100%;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+button, .btn-secondary {
+  padding: 10px 24px;
+  border-radius: 8px;
+  margin: 5px;
+  min-width: 120px;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-secondary {
+  background: #f8f9fa;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+  background-color: #e2e6ea;
+}
+
+.text-center {
+  text-align: center;
+  width: 100%;
+}

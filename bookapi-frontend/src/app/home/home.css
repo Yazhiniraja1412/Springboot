@@ -1,0 +1,71 @@
+/* Full-page centered container with background image */
+.home-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('https://static.vecteezy.com/system/resources/thumbnails/044/280/984/small_2x/stack-of-books-on-a-brown-background-concept-for-world-book-day-photo.jpg') no-repeat center center/cover;
+  padding: 20px;
+}
+
+/* Center card */
+.home-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  animation: fadeInUp 0.6s ease-in-out;
+}
+
+/* Title */
+.home-card h1 {
+  color: #007bff;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* Paragraph */
+.home-card p {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+/* Icon */
+.home-card img {
+  width: 100px;
+  margin-bottom: 25px;
+}
+
+/* Button */
+.home-card button {
+  background-color: #dd2bf4;
+  border: none;
+  color: white;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.home-card button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
