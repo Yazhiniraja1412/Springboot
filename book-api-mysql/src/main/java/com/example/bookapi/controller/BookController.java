@@ -11,6 +11,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/books")
+@CrossOrigin(origins = "http://localhost:4200")
 @SecurityRequirement(name = "bearerAuth") // 🔐 Add this to secure all endpoints
 public class BookController {
 
